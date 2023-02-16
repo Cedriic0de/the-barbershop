@@ -1,0 +1,50 @@
+<%- include('partials/header'); -%>
+
+    <section class="container booking-box">
+        <div class="row container-fluid booking-wrapper">
+            <form action="/booking" method="post" class="bookingForm">
+                <h2 id="book-heading">Book It in </h2>
+                
+                <fieldset class="names">
+                    <label for="name">First Name</label> <br>
+                    <input type="text" name="name" id="name" placeholder="Enter Name" required/> <br>
+                    <label for="surname">Last Name</label> <br>
+                    <input type="text" name="surname" id="surname" placeholder="Enter Surname" required/> <br>
+                </fieldset>
+
+                <fieldset class="contacts">
+                    <label for="phone">Phone Number</label> <br>
+                    <input type="text" name="phone" id="phone" max="10" placeholder="0123456789" required/> <br>
+                    <label for="email">Email Address</label> <br>
+                    <input type="email" name="userEmail" id="userEmail" placeholder="user@email.com" required/><br>
+                </fieldset>
+
+                <fieldset class="date-services">
+                    <label for="date">Appointment Date</label> <br>
+                    <input type="date" name="appointDate" id="appointDate" required/> <br>
+                    <label for="service">Select Your service: </label> <br>
+                    <select class="form-select form-select mb-3 services" name="service">
+                        <option value="cut">Haircut</option>
+                        <option value="shave">Shave</option>
+                        <option value="beard_trim">Beard Trim</option>
+                        <option value="color">Color</option>
+                    </select> <br>
+                </fieldset>
+
+                <fieldset class="location_boxes">
+                    <label for="location">Select preferred location:</label> <br>
+                    <select class="form-select form-select mb-3 loc" name="location">
+                        <option value="bluehills">Blue Hills Shopping Centre</option>
+                        <option value="carlswald">Carlswald Lifestyle Shopping Centre</option>
+                        <option value="waterfall">Waterfall Ridge Center shop 2C</option>
+                    </select> <br>
+                </fieldset>
+
+                <fieldset class="submit-box">
+                    <button type="submit" class="sbmt_btn">Book</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+<%- include('partials/footer'); -%>
