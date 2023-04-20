@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const nodemailer = require('nodemailer');
+const cool = require('cool-ascii-faces');
 const ejs = require("ejs");
 const { hostname } = require("os");
 
@@ -13,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
 
-const dbUrl = `mongodb+srv://barbershop-admin:HEo86aRwH0ME5RoH@cluster0.i2jlymj.mongodb.net/barbershopDB?retryWrites=true&w=majority`;
+const dbUrl = process.env.MONGODB_URI;
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -41,6 +42,7 @@ const AppointmentSchema = new mongoose.Schema({
 
 const Appointment = mongoose.model('Appointment', AppointmentSchema);
 
+app.get('/cool', (req, res) => res.send(cool()));
 app.get("/", function(req, res) {
 	res.render("home");
 });
