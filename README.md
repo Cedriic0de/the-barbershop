@@ -25,12 +25,12 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop Preview](/public/images/preview-desktop.png)
-[Mobile Preview](/public/images/preview-mobile.png)
+![Mobile Preview](/public/images/preview-mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Cedriic0de/the-barbershop/)
+- Live Site URL: [ReadMe](https://cedriic0de.github.io/the-barbershop/)
 
 
 ### Built with
@@ -41,6 +41,7 @@ Users should be able to:
 - CSS
 - Bootstrap
 - EJS
+- Nodemailer
 - NodeJs, ExpressJs, MongoDB
 
 ### Useful resources
