@@ -77,8 +77,9 @@ ul {
 }
 .btn-nav:hover{
     opacity: 0.8 !important;
-    color: #00000a !important;
-    background-color: #4D4D4D;
+    border: 1px solid #00000a;
+    color: #f2f2f2 !important;
+    background-color: #4D4D4D !important;
 }
 /* Menu Icon */
 .hamb{
@@ -141,7 +142,7 @@ ul {
 }
 /* Booking form styling */
 .booking-wrapper{
-    margin: auto auto 38px;
+    margin: 3em auto 38px;
     padding: 22px;
     display: flex;
     align-items: center;
@@ -182,13 +183,24 @@ input{
     border-radius: 4px;;
     border-bottom: 2px solid #000;
     background: rgba(0, 0, 0, 0.1);
-    /* cursor: pointer; */
+    width: 100%;
 }
 input:active, input:focus{
     border-bottom: 1px solid #000;
 }
 input::placeholder{
     line-height: 1;
+}
+input[type="date"] {
+    -webkit-datetime-edit-month-field {
+        color: red;
+      }
+      -webkit-datetime-edit-day-field {
+        color: white;
+      }
+      &::-webkit-datetime-edit-year-field {
+        color: blue;
+      }
 }
 select{
     width: 10%;
@@ -229,6 +241,27 @@ input[type="checkbox"]{
     background-color: #000;
     color: #fff;
 }
+/* ---- SUCCESS STYLING ----- */
+.success {
+    margin: 5em auto auto;
+    width: 80%;
+    height: 40vh;
+    text-align: center;
+}
+/* ---- LOGIN PAGE STYLING ---- */
+.login-form {
+    margin: 6em auto;
+    width: 50%;
+}
+.login-form>h2 {
+    text-align: center;
+}
+
+.login-field {
+    width: 100%;
+}
+
+
 /* Contact us Styling */
 .contact-us-box{
     margin: 24px auto 42px;
@@ -498,6 +531,12 @@ footer{
   .btn-nav {
     width: 100%;
   }
+  .book {
+    margin: auto auto;
+  }
+  .login-form {
+    width: 80%;
+}
     .logo-top{
         width: 45% !important;
         height: auto;

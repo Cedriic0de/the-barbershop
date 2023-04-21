@@ -57,6 +57,24 @@ app.get("/contact-us", (req, res) => {
 app.get("/success", (req, res) => {
     res.render("success");
 })
+app.get("/login", (req, res) => {
+  res.render("login");
+})
+app.get("/appointments", (req, res) => {
+  res.render("/appointments");
+})
+app.post("/login", (req, res) => {
+  Appointment.findOne({email: req.user.email}, function (err, appointment) {
+    if (err) {
+      console.log(err.message);
+      res.sendStatus(500);
+    } else if (!appointment) {
+      res.status(401).send("Invalid email address");
+    } else {
+      res.render("/appointments");
+    }
+  });
+})
 app.post("/success", (req, res) => {
   res.render("success");
 });
